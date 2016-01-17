@@ -1,0 +1,8 @@
+@(title: String, id: String, footer: Option[HtmlElement])(content: Seq[Html])
+
+<div data-role="page" id=@id>
+  <div data-role="header"><h1>@title</h1></div>
+  <div role="main" class="ui-content">@content</div>
+  <div data-role="footer"><h1>@footer.map(_.html)</h1></div>
+</div>
+
